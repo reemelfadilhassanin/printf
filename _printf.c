@@ -18,7 +18,7 @@ if (format == NULL)
 return (-1);
 for (i  = 0 ; *format != '\0'; i++)
 {
-if (format[i]  == '%')
+if (*format  == '%')
 {
 format++;
 count = selector(format, list, count);
