@@ -7,7 +7,7 @@
  */
 int printf_string(va_list list, int count)
 {
-	char *str = va_arg(list, char*);
+	char *str = va_arg(list, char *);
 
 if (str == NULL)
 str = "(null)";
