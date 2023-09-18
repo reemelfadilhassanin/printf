@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdarg.h>
+#include "main.h"
 /**
  * _printf - functon name printed
  * @format: format string
@@ -10,7 +11,7 @@ int _printf(const char *format, ...)
 va_list list;
 va_start(list, format);
 int count = 0;
-int i ;
+int i;
 
 if (format == NULL)
 return (-1);
