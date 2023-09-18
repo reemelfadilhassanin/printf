@@ -16,21 +16,20 @@ va_start(list, format);
 
 if (format == NULL)
 return (-1);
-for (i  = 0; *format != '\0'; i++)
+for (i  = 0 ; *format != '\0'; i++)
 {
-if (*format == '%')
+if (*format  == '%')
 {
 format++;
 count = selector(format, list, count);
 format++;
-
 }
 else
 {
 _putchar(*format);
 count++;
-format++;
 }
+format++;
 }
 va_end(list);
 return (count);

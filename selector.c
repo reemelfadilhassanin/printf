@@ -21,7 +21,8 @@ count = printf_string(list, count);
 break;
 default:
 _putchar('%');
-count++;
+_putchar(*format);
+count += 2;
 break;
 }
 return (count);
