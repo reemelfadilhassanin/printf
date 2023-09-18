@@ -10,26 +10,28 @@
  */
 int selector(const char *format, va_list list, int count)
 {
+int  c ;
+char *str;
 switch (*format)
 {
 case 'c':
-char c = (char) va_arg(list, int);
-putchar(c);
+c = va_arg(list, int);
+_putchar(c);
 count++;
 break;
 case 's':
-char *str = va_arg(args, char *);
+*str = va_arg(list, char *);
 if (str == NULL)
 str = "(null)";
 while (*str != '\0')
 {
-putchar(*str);
+_putchar(*str);
 str++;
 count++;
 }
 break;
 default:
-putchar('%');
+_putchar('%');
 count++;
 break;
 }
