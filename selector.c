@@ -10,29 +10,22 @@
  */
 int selector(const char *format, va_list list, int count)
 {
-int  c ;
+int  c;
 char *str;
 switch (*format)
 {
 case 'c':
-c = va_arg(list, int);
-_putchar(c);
+_putchar(va_arg(list, int));
 count++;
 break;
 case 's':
-*str = va_arg(list, char *);
-if (str == NULL)
-str = "(null)";
-while (*str != '\0')
-{
-_putchar(*str);
-str++;
-count++;
-}
+count = printf_string(list, count);
 break;
-default:
+case '%':
 _putchar('%');
 count++;
+break;
+default:
 break;
 }
 return (count);
