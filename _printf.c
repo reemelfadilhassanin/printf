@@ -16,7 +16,7 @@ va_start(list, format);
 
 if (format == NULL)
 return (-1);
-for (i  = 0 ; format[i] != '\0'; i++)
+for (i  = 0 ; *format != '\0'; i++)
 {
 if (format[i]  == '%')
 {
@@ -28,8 +28,8 @@ else
 {
 _putchar(*format);
 count++;
-}
 format++;
+}
 }
 va_end(list);
 return (count);
