@@ -10,6 +10,6 @@ int printf_char(va_list list, int count)
 	char s = va_arg(list, int);
 
 	_putchar(s);
-	return (s + 1);
+	return (count + 1);
 }
 

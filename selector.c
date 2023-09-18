@@ -10,8 +10,6 @@
  */
 int selector(const char *format, va_list list, int count)
 {
-int  c;
-char *str;
 switch (*format)
 {
 case 'c':
