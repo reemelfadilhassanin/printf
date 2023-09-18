@@ -27,7 +27,7 @@ format++;
 }
 else
 {
-_putchar(format[i]);
+_putchar(*format);
 count++;
 format++;
 }

@@ -19,11 +19,9 @@ break;
 case 's':
 count = printf_string(list, count);
 break;
-case '%':
+default:
 _putchar('%');
 count++;
-break;
-default:
 break;
 }
 return (count);
