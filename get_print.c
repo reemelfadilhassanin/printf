@@ -27,7 +27,6 @@ ph func_arr[] = {
 int flags = 14;
 
 int i;
-int flags = sizeof(fun_arr) / sizeof(func_RR[0]);
 
 for (i = 0; i < flags; i++)
 if (func_arr[i].c == s)

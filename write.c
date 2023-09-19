@@ -9,7 +9,7 @@
 int _putchar(char c)
 {
 static char buf[BUFFER_SIZE];
-static int;
+static int i;
 
 if (i >= BUFFER_SIZE || c == -1)
 {

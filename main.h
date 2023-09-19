@@ -11,6 +11,8 @@ int space;
 int hash;
 } flags_s;
 
+typedef struct printHandler
+{
 char c;
 int (*f)(va_list ap, flags_s *f);
 } ph;
