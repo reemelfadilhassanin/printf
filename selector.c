@@ -23,6 +23,9 @@ case '%':
 _putchar('%');
 count++;
 break;
+case 'b':
+count = printf_binary(va_arg(list, unsigned int));
+break;
 default:
 break;
 }

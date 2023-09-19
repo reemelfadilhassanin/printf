@@ -12,4 +12,7 @@ int printf_char(va_list list, int count);
 int printf_string(va_list list, int count);
 int printf_integer(va_list list, int count);
 int selector(const char *format, va_list list, int count);
+int printf_binary(unsigned int n);
+
+
 #endif
