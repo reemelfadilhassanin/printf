@@ -22,7 +22,7 @@ ph func_arr[] = {
 {'p', print_address},
 {'%', print_percent}
 };
-int flags = sizeof(func_arr) / sizeof(func_arr[0]);;
+int flags = sizeof(func_arr) / sizeof(func_arr[0]);
 
 int i;
 
