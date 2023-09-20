@@ -1,9 +1,8 @@
 #include "main.h"
-
 /**
  * get_print - function that get print funcion
  * @s: pointer of character 
- * func_arr[]: to find a match between the specifier and printe
+ * func_arr[]:to find a match between the specifier and printe
  * Return: a pointer that match
  */
 int (*get_print(char s))(va_list, flags_s *)
