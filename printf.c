@@ -7,39 +7,39 @@
  */
 int _printf(const char *format, ...)
 {
-int (*pfunc)(va_list, flags_s *);
-const char *p;
-va_list arguments;
-flags_s flags = {0, 0, 0};
-
-int count = 0;
-
-va_start(arguments, format);
 if (!format || (format[0] == '%' && !format[1]))
 return (-1);
-if (format[0] == '%' && format[1] == ' ' && !format[2])
-return (-1);
-for (p = format; *p; p++)
+va_list arguments;
+va_start(arguments, formats);
+int count = 0;
+
+while (*format)
 {
-if (*p == '%')
+if (*format == '%')
 {
-p++;
-if (*p == '%')
+format++;
+if (*format == '%')
 {
 count += _putchar('%');
-continue;
-}
-while (get_flag(*p, &flags))
-p++;
-pfunc = get_print(*p);
-count += (pfunc)
-? pfunc(arguments, &flags)
-: _printf("%%%c", *p);
 }
 else
-count += _putchar(*p);
+{
+int printed = handle_format(&format, arguments);
+if (printed == -1)
+{
+va_end(arguments);
+return (-1);
 }
-_putchar(-1);
+count += printed;
+}
+}
+else
+{
+count += +putchar(*format);
+}
+format++;
+}
+
 va_end(arguments);
 return (count);
 }
