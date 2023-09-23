@@ -17,7 +17,6 @@ char c;
 int (*f)(va_list ap, flags_s *f);
 } ph;
 int print_int(va_list l, flags_s *f);
-int handle_format(const char **format, va_list arguments);
 void print_number(int n);
 int print_unsigned(va_list l, flags_s *f);
 int count_digit(int i);

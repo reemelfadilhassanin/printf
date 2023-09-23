@@ -35,28 +35,26 @@ return (count);
 
 /**
  * print_rev - function that writes a string in reverse
- * @l: list of argument
- * @f: pointer to the struct flags that determines
+ * @l: list of argument string to print
  * Return: count the printed character
  */
 int print_rev(va_list l, flags_s *f)
 {
-int i = 0, j;
-char *s = va_arg(l, char *);
+char *st;
+int x, y = 0;
+st = va_arg(l, char *);
+if (st == NULL)
+st = ")llun(";
+for (x = 0; st[x] != '\0'; x++)
+;
+for (x -= 1 ; x >= 0; x--)
+{
+_putchar(st[x]);
+y++;
 
-(void)f;
-if (!s)
-s = "(null)";
-
-while (s[i])
-i++;
-
-for (j = i - 1; j >= 0; j--)
-_putchar(s[j]);
-
-return (i);
 }
-
+return (y);
+}
 /**
  * print_rot13 - prints a string using rot13
  * @l: list of arguments from _printf

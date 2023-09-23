@@ -1,7 +1,6 @@
 #include "main.h"
-
 /**
- * print_hex - function that prints a number in hexadecimal 
+ * print_hex - function that prints a number in hexadecimal
  * @l: va_list arguments from _printf
  * @f: pointer to the struct flags that determines
  * Return: the number of char printed

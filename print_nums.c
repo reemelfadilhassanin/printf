@@ -52,28 +52,12 @@ n1 = -n;
 else
 n1 = n;
 
-char buffer[12];
-int i = 0;
-if (n1 == 0)
-buffer[i++] = '0';
-else
-{
-
-while (n1 > 0)
-{
-buffer[i++] = (n1 / 10) + '0';
+if (n1 / 10)
 print_number(n1 / 10);
-}
-}
-int j;
-for(j = i - 1; j >=0; j--)
-{
-
-_putchar(buffer[j]);
-}
+_putchar((n1 % 10) + '0');
 }
 /**
- * count_digit - return the integer digts
+ * count_digit - function that return integre digits
  * @i: integer number
  * Return: digits of number
  */

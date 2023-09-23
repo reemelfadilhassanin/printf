@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * get_print - function that get print funcion
- * @s: pointer of character 
+ * @s: pointer of character
  * Return: a pointer that match
  */
 int (*get_print(char s))(va_list, flags_s *)
@@ -22,7 +22,7 @@ ph func_arr[] = {
 {'p', print_address},
 {'%', print_percent}
 };
-int flags = sizeof(func_arr) / sizeof(func_arr[0]);
+int flags = 14;
 
 int i;
 

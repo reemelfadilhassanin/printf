@@ -11,21 +11,20 @@ int get_flag(char s, flags_s *f)
 {
 int i = 0;
 
-if (s == '+')
+switch (s)
 {
+case '+':
 f->plus = 1;
 i = 1;
-}
-else if (s == ' ')
-{
+break;
+case ' ':
 f->space = 1;
 i = 1;
-}
-else if (s == '#')
-{
+break;
+case '#':
 f->hash = 1;
 i = 1;
+break;
 }
-
 return (i);
 }
